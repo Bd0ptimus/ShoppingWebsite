@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://kit.fontawesome.com/yourcode.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Medium Article</title>
+</head>
+<body>
+    
+<!-- Menu top bar-->
+    <div class ="menu" id="sidenav">
+        <div id="icon-close">
+            <a href="javascript:void(0)" onclick="closeNav()" class="closebtn">&times</a>
+        </div>
+        <h1>MENU</h1>
+        <div class="main">
+            <a href="#shop" onclick="closeNav()">Lipstick</a>
+            <a href="#shop" onclick="closeNav()">Perfume</a>
+        </div>
+        <div class="auxialiary">
+            <a href="#contact" onclick="closeNav()">Contact</a>
+            <a href="#subscribe" onclick="closeNav()">Subscribe</a>
+            <a href="#end" onclick="closeNav()">Help</a>
+        </div>
+    </div>
+    
+<!-- Top bar -->
+    <div class="top-bar">
+        <div class="choosing hide-large">
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        </div>
+        <div class="group-item">
+            <a><i class="fa fa-user-circle-o fa-2x" aria-hidden="true" style="cursor: pointer" onclick="openLogin()"></i></a>
+            <a href=#><i class="fa fa-heart fa-2x"></i></a>
+            <a style="text-decoration: none; cursor: pointer" onclick="OpenSearchBar()"><i class="fa fa-search fa-2x" aria-hidden="true"></i></a>
+            <a id="hover-cash" style="text-decoration: none" onclick="OpenStore()"><i class="fa fa-cart-arrow-down fa-2x" aria-hidden="true" style="z-index: -1; cursor: pointer"><p id="cash" ></p></i></a>
+        </div>
+    </div>
+    
+    
+<!--Overlay effect-->
+<div class="overlay" onclick="closeNav()" style="cursor: pointer" id="myOverlay" ></div>
+    
+    
+<div id="main">
+    <!--Main picture-->
+        <div id="wallpaper">
+            <img src="anh/695765.jpg" style="width:94%;height: auto; margin: 30px 3%">
+            <div class="wallpaper-content">
+                <h1 style="position: absolute;font-size: 30px; top:50px;left: 70px">New arrivals</h1>
+                <a href="#shop" class="button" style="position: absolute; padding: 17px 20px; font-size: 20px; top:100px; left:70px  ">SHOP NOW</a>
+            </div>
+        </div>
+        
+        
+        <!--SHOP-->
+        <div id="shop" class="view-shop">
+            <div class="product-pic">
+                <img src="anh/1.jpg" style="width: 90%; margin: 5%">
+                <p class="describe">I-like</p>
+                <p class="price"><b><i class="fa fa-rub fa-1g" aria-hidden="true"></i>100</b></p>
+                <a class="add-buy button" onclick="Buy1()">Add to buy<i class="fa fa-cart-plus" aria-hidden="true"></i></a>
+            </div>
+            <div class="product-pic" style="left:50%">
+                <img src="anh/2.jpg" style="width: 90%; margin: 5%">
+                <p class="describe">U-like</p>
+                <p class="price"><b><i class="fa fa-rub fa-1g" aria-hidden="true"></i>300</b></p>
+                <a class="add-buy button" onclick="Buy2()">Add to buy<i class="fa fa-cart-plus" aria-hidden="true"></i></a>
+            </div>
+            <div class="product-pic" style="margin-top:50%">
+                <img src="anh/3.jpg" style="width: 90%; margin: 5%">
+                <p class="describe">Mac</p>
+                <p class="price"><b><i class="fa fa-rub fa-1g" aria-hidden="true"></i>1500</b></p>
+                <a class="add-buy button" onclick="Buy3()">Add to buy<i class="fa fa-cart-plus" aria-hidden="true"></i></a>
+            </div>
+            <div class="product-pic" style="margin-top:50%; left:50%">
+                <img src="anh/4.jpg" style="width: 90%; margin: 5%">
+                <p class="describe">Kiko</p>
+                <p class="price"><b><i class="fa fa-rub fa-1g" aria-hidden="true"></i>850</b></p>
+                <a class="add-buy button" onclick="Buy4()">Add to buy<i class="fa fa-cart-plus" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        
+<!--LOGIN-->
+        <div id="id01" class="modal">
+            <span onclick="closeLogin()" class="closebtn-main">&times;</span>
+            
+            <!--Content-->
+            <form class="modal-content animate">
+                <div class="imgcontainer">
+                    <img src="anh/andLogin.png" alt="Avatar" class="avatar">
+                </div>
+                
+                <div class="container">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+                
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    
+                    <button type="submit" onclick="closeLogin()">Login</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                </div>
+                <div class="container" style="background-color: #f1f1f1">
+                    <span class="psw">Forgot<a href=#> password?</span>
+                </div>
+            </form>
+        </div>
+            
+ <!-- STORE-->
+            
+    <div class="store-container" id="store">
+        <a onclick="CloseStore()" class="closebtn-main">&times;</a>
+        
+        <div><h1 class="store-header" id="test" style="color:black">STORE</h1></div>
+        <div class="small-container" id="peac1">
+            <img src="anh/1.jpg" style="width: 180px; height: auto; margin:5px">
+            <div class="store-inf">
+                    
+                <p class="store-describe">I-like</p>
+                    
+                <p class="store-price"><b><i class="fa fa-rub fa-1g" aria-hidden="true"></i>100</b></p>
+                    
+                <div class="quatity">
+                    <a class="store-plus" onclick="Buy1()"><i class="fa fa-plus plus-point" aria-hidden="true"></i>
+                    </a>
+                    <p class="store-number" id="num1">20</p>
+                    <a class="store-minus" onclick="BuyMinus1()"><i class="fa fa-minus" aria-hidden="true"></i> 
+                    </a>
+                    <div class="store-trash">
+                        <a onclick="trash1()"><i class="fa fa-trash fa-2x" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+          </div>
+        
+        <div class="small-container" style="margin-top: 20px" id="peac2">
+            <img src="anh/2.jpg" style="width: 180px; height: auto; margin:5px">
+            <div class="store-inf">
+                    
+                <p class="store-describe">U-like</p>
+                    
+                <p class="store-price"><b><i class="fa fa-rub fa-1g" aria-hidden="true"></i>300</b></p>
+                    
+                <div class="quatity">
+                    <a class="store-plus" onclick="Buy2()"><i class="fa fa-plus plus-point" aria-hidden="true"></i>
+                    </a>
+                    <p class="store-number" id="num2">40</p>
+                    <a class="store-minus" onclick="BuyMinus2()"><i class="fa fa-minus" aria-hidden="true"></i> 
+                    </a>
+                    <div class="store-trash">
+                        <a onclick="trash2()"><i class="fa fa-trash fa-2x" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        <div class="small-container" style="margin-top: 20px" id="peac3">
+            <img src="anh/3.jpg" style="width: 180px; height: auto; margin:5px">
+            <div class="store-inf">
+                    
+                <p class="store-describe">Mac</p>
+                    
+                <p class="store-price"><b><i class="fa fa-rub fa-1g" aria-hidden="true"></i>1500</b></p>
+                    
+                <div class="quatity">
+                    <a class="store-plus" onclick="Buy3()"><i class="fa fa-plus plus-point" aria-hidden="true"></i>
+                    </a>
+                    <p class="store-number" id="num3">40</p>
+                    <a class="store-minus" onclick="BuyMinus3()"><i class="fa fa-minus" aria-hidden="true"></i> 
+                    </a>
+                    <div class="store-trash">
+                        <a onclick="trash3()"><i class="fa fa-trash fa-2x" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="small-container" style="margin-top: 20px" id="peac4">
+             <img src="anh/4.jpg" style="width: 180px; height: auto; margin:5px">
+            <div class="store-inf">
+                    
+                <p class="store-describe">Kiko</p>
+                    
+                <p class="store-price"><b><i class="fa fa-rub fa-1g" aria-hidden="true"></i>850</b></p>
+                    
+                <div class="quatity">
+                    <a class="store-plus" onclick="Buy4()"><i class="fa fa-plus plus-point" aria-hidden="true"></i>
+                    </a>
+                    <p class="store-number" id="num4">40</p>
+                    <a class="store-minus" onclick="BuyMinus4()"><i class="fa fa-minus" aria-hidden="true"></i> 
+                    </a>
+                    <div class="store-trash">
+                        <a onclick="trash4()"><i class="fa fa-trash fa-2x" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <a class="puchare-btn">PAY</a>      
+    </div> 
+            
+<!-- SEARCH BAR-->
+    <div class="search-container" id="search">
+        <a class="closebtn-main" onclick="CloseSearchBar()">&times;</a>
+        <div class="smarll-search-container">
+            <div class="search-text"><input type="text" placeholder="Search..." required></div>
+            <div class="search-btn"><a type="submit" style="color:black;cursor:pointer"><i class="fa fa-search fa-2x" aria-hidden="true"></i></a></div>
+        </div>
+    </div>
+            
+<!-- CONTACT-->
+    <div class="contact-container" id="contact">
+        <div class="contact-zone contact-zone1">
+            <h1 class="contact-zone-header1">Contact</h1>
+            <h1 class="contact-zone-header2">Question? Go ahead.</h1>
+            <input type="text" placeholder="Name" name="cName" required>
+            <input type="text" placeholder="Email" name="cEmail" required>
+            <input type="text" placeholder="Subject" name="cSubject" required>
+            <input type="text" placeholder="Message" name="cMessage" required>
+            <button class="button" type="submit">Send</button>
+        </div>
+        
+        <div class="contact-zone contact-zone2">
+            <h1 class="contact-zone-header1">About</h1>
+            <div class="contact-zone-ele"><a>About us</a></div>
+            <div class="contact-zone-ele"><a>We're hiring</a></div>
+            <div class="contact-zone-ele"><a>Support</a></div>
+            <div class="contact-zone-ele"><a>Find store</a></div>
+            <div class="contact-zone-ele"><a>Shipment</a></div>
+            <div class="contact-zone-ele"><a>Payment</a></div>
+            <div class="contact-zone-ele"><a>Gift card</a></div>
+            <div class="contact-zone-ele"><a>Return</a></div>
+            <div class="contact-zone-ele"><a>Help</a></div>
+        </div>
+        
+        <div class="contact-zone contact-zone3">
+            <h1 class="contact-zone-header1">Store</h1>
+            <p class="contact-zone-ele"><i class="fa fa-map-marker" aria-hidden="true"></i> Company Name</p>
+            <p class="contact-zone-ele"><i class="fa fa-phone" aria-hidden="true"></i> 00099999999</p>
+            <p class="contact-zone-ele"><i class="fa fa-envelope" aria-hidden="true"></i> thedung.1292@gmail.com</p>
+            <h1 class="contact-zone-header1">We accept</h1>
+            <p class="contact-zone-ele"><i class="fa fa-cc-amex" aria-hidden="true"></i> Amex</p>
+            <p class="contact-zone-ele"><i class="fa fa-credit-card" aria-hidden="true"></i> Credit card</p>
+            <div class="social-icon">
+                <a><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                <a><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a><i class="fa fa-pinterest-square" aria-hidden="true"></i></a>
+                <a><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+<!--SUBSRIBE-->            
+    <div class="subscribe-container" id="subscribe">
+        <h1 style="font-size: 30px; margin: 20px 10vw">Subscribe</h1>
+        <h2 style="font-size: 18px; margin: 20px 10vw">To get special offers and VIP treatment:</h2>
+        <div class="subscribe-text"><input type="text" placeholder="Enter E-mail" required></div>
+        <a class="button subscribe-btn" type="submit">Subscribe</a>
+    </div>
+  
+<!-- FOOTER-->
+    <div class="footer" id="end">
+        <h1>Powered by BUI THE DUNG</h1>
+    </div>
+</div>           
+    <script>
+        var i=0;
+        var a=[0,0,0,0];
+        
+        function openNav(){
+            document.getElementById("sidenav").style.width = "250px";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function closeNav(){
+            document.getElementById("sidenav").style.width = "0px"; 
+            document.getElementById("myOverlay").style.block = "none";
+        }
+        function Buy1(){
+            a[0]++;
+            i=a[0]+a[1]+a[2]+a[3];
+            var ele=document.getElementById("cash");
+            ele.innerHTML = i;
+            document.getElementById("num1").innerHTML=a[0];
+        }
+        function Buy2(){
+            a[1]++;
+            i=a[0]+a[1]+a[2]+a[3];
+            var ele=document.getElementById("cash");
+            ele.innerHTML = i;
+            document.getElementById("num2").innerHTML=a[1];
+        }
+        function Buy3(){
+            a[2]++;
+            i=a[0]+a[1]+a[2]+a[3];
+            var ele=document.getElementById("cash");
+            ele.innerHTML = i;
+            document.getElementById("num3").innerHTML=a[2];
+        }
+        function Buy4(){
+            a[3]++;
+            i=a[0]+a[1]+a[2]+a[3];
+            var ele=document.getElementById("cash");
+            ele.innerHTML = i;
+            document.getElementById("num4").innerHTML=a[3];
+        }
+        
+        function BuyMinus1(){
+            a[0]--;
+            i=a[0]+a[1]+a[2]+a[3];
+             if(a[0]>0)
+                 {
+                     var ele=document.getElementById("cash");
+                     ele.innerHTML = i;
+                     document.getElementById("num1").innerHTML=a[0];
+                 }
+            else if(a[0]==0)
+                {
+                    a[0]=1;
+                }
+        }
+        function BuyMinus2(){
+            a[1]--;
+            i=a[0]+a[1]+a[2]+a[3];
+            if(a[1]>0)
+                 {
+                      var ele=document.getElementById("cash");
+                      ele.innerHTML = i;
+                      document.getElementById("num2").innerHTML=a[1];
+                 }
+            else if(a[1]==0)
+                {
+                    a[1]=1;
+                }
+        }
+        function BuyMinus3(){
+            a[2]--;
+            i=a[0]+a[1]+a[2]+a[3];
+            if(a[2]>0)
+                 {
+                      var ele=document.getElementById("cash");
+                      ele.innerHTML = i;
+                      document.getElementById("num3").innerHTML=a[2];
+                 }
+            else if(a[2]==0)
+                {
+                    a[2]=1;
+                }
+        }
+        function BuyMinus4(){
+            a[3]--;
+            i=a[0]+a[1]+a[2]+a[3];
+            if(a[3]>0)
+                 {
+                      var ele=document.getElementById("cash");
+                      ele.innerHTML = i;
+                      document.getElementById("num4").innerHTML=a[3];
+                 }
+            else if(a[3]==0)
+                {
+                    a[3]=1;
+                }
+        }
+        
+        function trash1()
+        {
+            a[0]=0;
+            document.getElementById("peac1").style.display="none";
+            i=a[0]+a[1]+a[2]+a[3];
+            document.getElementById("cash").innerHTML=i;
+        }
+        
+        function trash2()
+        {
+            a[1]=0;
+            document.getElementById("peac2").style.display="none";
+            i=a[0]+a[1]+a[2]+a[3];
+            document.getElementById("cash").innerHTML=i;
+        }
+        
+        function trash3()
+        {
+            a[2]=0;
+            document.getElementById("peac3").style.display="none";
+            i=a[0]+a[1]+a[2]+a[3];
+            document.getElementById("cash").innerHTML=i;
+        }
+        
+        function trash4()
+        {
+            a[3]=0;
+            document.getElementById("peac4").style.display="none";
+            i=a[0]+a[1]+a[2]+a[3];
+            document.getElementById("cash").innerHTML=i;
+        }
+        
+        function openLogin(){
+            document.getElementById("id01").style.display="block";
+        }
+        function closeLogin(){
+            document.getElementById("id01").style.display="none";
+        }
+        var modal=document.getElementById("id01");
+        d
+        window.onclick = function(event){
+            if (event.target == modal)
+                {
+                 modal.style.display = 'none';
+                }
+        }
+        
+        
+        function OpenStore(){
+            document.getElementById("store").style.display="block";
+            for (var k=0; k<4 ; k++)
+                {
+                    if (a[k]>0)
+                        {
+                            document.getElementById("peac"+(k+1)).style.display="inline-block";
+                        }
+                    else
+                        {
+                            continue;
+                        }
+                }
+        }
+        
+        
+        function CloseStore(){
+            document.getElementById("store").style.display="none";
+        }
+        
+        function OpenSearchBar(){
+            document.getElementById("search").style.display="block";
+        }
+        
+        function CloseSearchBar(){
+            document.getElementById("search").style.display="none";
+        }
+        
+    </script>
+</body>
+</html>
